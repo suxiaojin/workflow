@@ -128,11 +128,21 @@ class ModifyPwdView(View):
             return render(request, "password_reset.html", {"email": email, "modify_form": "密码设置不一致"})
 
 
+class Create_Project(View):
+    def get(self,request):
+        return render(request,'create_project.html',{})
 
+class Create_Task(View):
+    def get(self,request):
+        return render(request,'create_task.html',{})
 
+class All_Task(View):
+    def get(self,request):
+        return render(request,'all_task.html',{})
 
-
-
+class Handling_Task(View):
+    def get(self,request):
+        return render(request,'handling_task.html',{})
 
 
 

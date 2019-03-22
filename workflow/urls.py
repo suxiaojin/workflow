@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 import xadmin
-from workorder.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView
+from workorder.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,Create_Project,Create_Task,All_Task,Handling_Task
 from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -28,5 +28,8 @@ urlpatterns = [
     url('^forget/$', ForgetPwdView.as_view(), name='forget_pwd'),
     url(r'^reset/(?P<active_code>.*)/$', ResetView.as_view(), name='reset_pwd'),
     url(r'^modify_pwd/$',ModifyPwdView.as_view(),name='modify_pwd'),
-
+    url(r'^create_project/$', Create_Project.as_view(),name='create_project'),
+    url(r'^create_task/',Create_Task.as_view(),name='create_task'),
+    url(r'^all_task/',All_Task.as_view(),name='all_task'),
+    url(r'^handling_task/',Handling_Task.as_view(),name='handling_task'),
 ]
