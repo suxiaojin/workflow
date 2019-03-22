@@ -143,3 +143,6 @@ EMAIL_HOST_USER='suxiaojin928380@sina.com'
 EMAIL_HOST_PASSWORD='suxiaojin928380'
 EMAIL_USE_TLS=False
 EMAIL_FROM='suxiaojin928380@sina.com'
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
